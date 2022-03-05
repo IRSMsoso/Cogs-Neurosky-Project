@@ -2,5 +2,22 @@
 	"FileVersion": 3,
 	"EngineAssociation": "{47C5599C-40E0-8735-EA29-2A97443291DE}",
 	"Category": "",
-	"Description": ""
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "CogsProject",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"GameplayAbilities",
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		}
+	]
 }
