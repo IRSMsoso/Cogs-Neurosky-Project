@@ -9,8 +9,12 @@ enum class EAbilityInputID : uint8
 {
 	// 0 None
 	None			UMETA(DisplayName = "None"),
-	// 1 LMB
+	// 1 Confirm
+	Confirm			UMETA(DisplayName = "Confirm"),
+	// 2 Cancel
+	Cancel			UMETA(DisplayName = "Cancel"),
+	// 3 LMB
 	Shoot			UMETA(DisplayName = "Shoot"),
-	// 2 RMB
+	// 4 RMB
 	Aim				UMETA(DisplayName = "Aim"),
 };

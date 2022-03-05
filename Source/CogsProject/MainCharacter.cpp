@@ -55,6 +55,21 @@ void AMainCharacter::PossessedBy(AController* NewController)
 }
 
 
+void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	AbilityComponent->BindAbilityActivationToInputComponent(PlayerInputComponent,
+		FGameplayAbilityInputBinds(
+			FString("ConfirmTarget"),
+			FString("CancelTarget"),
+			"EAbilityInputID",
+			static_cast<int32>(EAbilityInputID::Confirm),
+			static_cast<int32>(EAbilityInputID::Cancel)
+		)
+	);
+}
+
 UAbilitySystemComponent* AMainCharacter::GetAbilitySystemComponent() const
 {
 	return AbilityComponent;

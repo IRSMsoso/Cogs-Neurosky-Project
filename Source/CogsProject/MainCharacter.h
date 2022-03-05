@@ -36,6 +36,9 @@ public:
 	void PossessedBy(AController* NewController) override;
 
 
+
+	void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
 private:
 	UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 
